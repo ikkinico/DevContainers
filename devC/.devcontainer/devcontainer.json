@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "DevCApp",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		// Path is relative to the devcontainer.json file.
+		"dockerfile": "DockerFile"
+	  },
+	 // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // This can be used to network with other containers or with the host.
+  // 8080 => Spring Actuator
+  "forwardPorts": [8080],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "java -version",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-maven",
+        "redhat.java",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-java-test"
+      ]
+    }
+
+}
